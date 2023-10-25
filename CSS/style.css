@@ -1,0 +1,441 @@
+body {
+  height: 3000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+.general-color {
+  color: var(--main-color)
+}
+
+/* CSS Variables */
+:root {
+
+  --safety-orange: hsl(25, 100%, 50%);
+  --lavender-gray: hsl(230, 19%, 81%);
+  --persian-rose: hsl(328, 100%, 59%);
+  --main-color: #ff3838;
+  --eerie-black: hsl(240, 6%, 10%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured-2: hsl(210, 60%, 98%);
+  --platinum: hsl(0, 0%, 90%);
+  --gray-web: hsl(220, 5%, 49%);
+  --cultured: hsl(0, 0%, 93%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 14%, 98%);
+  --black: hsl(0, 0%, 0%);
+
+  --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-league-spartan: 'League Spartan', sans-serif;
+
+
+  --fw-700: 700;
+  --fw-500: 500;
+
+  --section-padding: 60px;
+
+  --shadow-1: 0 6px 24px var(--black_5);
+  --shadow-2: 0 2px 28px var(--black_10);
+
+  --radius-2: 2px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(250, 244, 244);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.scrolling-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--main-color);
+  color: rgb(200, 192, 192);
+  border-radius: 50%;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  transition: all .3s ease;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.scrolling-up.show {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+  .buy-section {
+    overflow-x: scroll;
+
+  }
+}
+
+.general-btn {
+  color: var(--main-color);
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 8px 30px;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.general-btn:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.navbar ul li a:hover {
+  color: var(--main-color);
+
+}
+.btn-outline-danger{
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+.btn-outline-danger:hover{
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+
+}
+.main-section {
+
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+
+.txt-main-section h2 {
+  margin-top: 30%;
+  font-size: 60px;
+
+}
+
+.image {
+  /* border: 2px solid blue; */
+  width: 100%;
+  height: 500px;
+  animation: move 3s infinite alternate;
+  -webkit-animation: move 3s infinite alternate;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+
+}
+
+@keyframes move {
+
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(3rem);
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+  .txt-main-section h2 {
+    margin-top: 20px;
+    font-size: 40px;
+
+  }
+
+  .image {
+
+    height: 320px;
+
+  }
+}
+
+.our-speciality {
+  /* border: 2px solid red; */
+  padding: 50px 0;
+}
+
+.our-speciality .box-our-speciality {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.our-speciality .box-our {
+
+  min-height: 275px;
+}
+.most-popular-foods {
+  /* height: 100vh; */
+  /* border:2px solid blue; */
+  padding: 40px 0;
+}
+
+.most-popular-foods .card {
+  padding: 20px;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.most-popular-foods .card img {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.most-popular-foods .card p {
+  color: gold;
+}
+
+.price {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  background-color: var(--main-color);
+  color: white;
+  width: 120px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+  .most-popular-foods .card-2 {
+    padding-bottom: 110px;
+  
+  }
+}
+.how-it-works {
+  padding-bottom: 50px;
+  /* border: 2px solid green; */
+  /* height: 100vh; */
+
+}
+
+.box-how-it-works {
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  background-color: white;
+  min-height: 290px;
+}
+
+.our-food-gallery {
+  /* border: 2px solid blue; */
+  padding: 40px 0;
+}
+
+.image-our-food-gallery {
+  /* border: 2px solid green; */
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 210px;
+
+}
+
+.image-our-food-gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.our-customers-reviews {
+  /* border: 2px solid red; */
+  padding-bottom: 40px;
+}
+
+.box-our-customers-reviews {
+  text-align: center;
+  border: 15px solid #fff;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .3);
+  background-color: #333;
+  padding-top: 100px;
+  margin-top: 20px;
+}
+
+.image-box-our-customers-reviews {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 10px solid white;
+  margin: auto;
+  margin-top: -160px;
+}
+
+.image-box-our-customers-reviews img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.box-our-customers-reviews .starts {
+  color: var(--main-color);
+}
+
+.box-our-customers-reviews .txt {
+  color: white;
+}
+
+.order-now {
+  /* border: 2px solid red; */
+  padding: 40px 0;
+}
+
+.image-form {
+  /*border: 2px solid blueviolet;
+  */
+  padding: 25px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.image-order-now {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 322px;
+}
+
+.image-order-now img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form-order-now {
+  /* border: 2px solid blue; */
+  padding-bottom: 30px;
+}
+
+.form-order-now input {
+  font-size: 18px;
+  padding: 14px;
+}
+
+.form-order-now input::placeholder {
+  font-size: 18px;
+}
+
+.copy-right {
+  padding: 25px;
+  text-align: center;
+  color: white;
+}
