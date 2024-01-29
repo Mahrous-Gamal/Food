@@ -24,13 +24,13 @@ To run **Food Website** locally, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/Mahrous-Gamal/Food-Website.git
+sudo git clone https://github.com/Mahrous-Gamal/Food.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/Mahrous-Gamal/Food-Website.git
+git clone https://github.com/Mahrous-Gamal/Food.git
 ```
 
 ### Contact
